@@ -1,16 +1,16 @@
-// Note: Using CSS variable approach for fonts
-// In production with internet access, you can use Google Fonts like this:
+// System font fallback configuration
+// When deploying to production with internet access, you can use Google Fonts:
+//
 // import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-
-// For environments without internet access, we use system fonts
-// These CSS variables are used in tailwind.config.ts
+// export const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+// export const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta", display: "swap" });
+//
+// For now, we use CSS variables that fall back to system fonts defined in tailwind.config.ts
 
 export const inter = {
   variable: "--font-inter",
-  className: "font-inter",
 };
 
 export const plusJakarta = {
   variable: "--font-jakarta",
-  className: "font-jakarta",
 };
